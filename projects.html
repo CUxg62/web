@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects - Sam's Website</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2em;
+            background: #333;
+            color: white;
+        }
+
+        #logo {
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a.active {
+            color: #e7e7e7;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project-text {
+    width: 48%; /* Only for Text 1 */
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.project-full-width-text {
+    width: 80%; /* Text 2 will span the full width */
+    text-align: left;
+    font-size: 1.3em;
+    margin-top: 20px; /* Space between the image and Text 2 */
+}
+
+.project-figure {
+    width: 48%; /* Image will align with Text 1 */
+    text-align: center;
+}
+
+.project-figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.section-high-energy {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.high-energy-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.high-energy-text{
+    width: 48%;
+    text-align: left;
+	font-size: 1.3em;
+}
+
+.high-energy-figure {
+    width: 48%;
+    text-align: left;
+}
+
+.high-energy-figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-others {
+    background-color: white;
+    padding: 20px;
+    text-align: center; /* Centering the title */
+}
+
+.other-projects-list {
+    list-style-position: inside; /* Positions the list marker inside the content flow */
+    text-align: left; /* Aligns the list text to the left */
+    display: inline-block; /* Makes the list block-level for centering */
+    margin-top: 20px; /* Adds space below the title */
+    font-size: 1.3em; /* Matches the main text font size */
+}
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">SG</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Research Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="work.html">Professional Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+<section id="quantum" class="section-quantum">
+    <h2>Quantum Information Processing</h2>
+    <div class="project-content">
+        <div class="project-text">
+            <p>    Josephson junction is a structure with two superconductors separated by a thin insulating barrier. It allows the quantum tunneling of Cooper pairs (pairs of electrons with opposite spins) between the superconductors without resistance. In a simple circuit with a capacitor and a Josephson junction, the junction acts like an inductor but has nonlinear inductance. The energy spacing in this system is not uniformly distributed. Therefore, we can distinguish two states as the zero state and the one state for computation.</p>
+        </div>
+        <div class="project-figure">
+            <img src="jj.png" alt="Josephson Junction">
+        </div>
+    </div>
+    <div class="project-full-width-text">
+        <p>    Over time, AlOx-based Josephson junctions may become unstable. This instability is believed to be due to the diffusion of oxygen atoms either into or out of the AlOx barrier. This can alter the properties of the barrier and, consequently, the performance of the junction, because the movement of oxygen atoms can change the electrical characteristics of the insulating layer. Our goal is to fabricate AlOx-based Josephson junctions that minimize oxygen diffusion, using oxygen diffusion barriers that mitigate the surface oxide.</p>
+        <p>    My role in this project is to control the V-I measurement of the Josephson junctions. I have developed a code in LabVIEW that implements the four-terminal sensing for the measurement. Since the superconductor material in the junctions only becomes superconducting under a very low temperature (around 9 Kelvin, or -264 degrees Celsius), the measurement will be done in a dilution fridge. I am currently working on the construction of the measurement setup.</p>
+    </div>
+</section>
+
+
+<section id="high-energy" class="section-high-energy">
+    <h2>High Energy Physics</h2>
+    <div class="high-energy-content">
+        <div class="high-energy-text">
+            <h3>Electron-ion collider</h3>
+            <p>The Electron-Ion Collider (EIC) at Brookhaven National Laboratory is a particle accelerator that collides electrons with protons head-on to produce snapshots of those particles’ internal structure. The electron beam will reveal the arrangement of the quarks and gluons that make up the protons and neutrons of nuclei. The force that holds quarks together, carried by the gluons, is the strongest in Nature. The EIC will allow us to study this “strong nuclear force” and the role of gluons in the matter within and all around us. What we learn from the EIC could power the technologies of tomorrow.</p>
+            <p>In this project, I simulate beam trajectories in Bmad and Tao (program for particle accelerator optics). The figure on the right shows the structure of the EIC. Protons are accelerated in the Booster accelerator. Once they reach optimal speed, they are extracted to the main collider using resonant (slow) extraction. I perform beam orbit optimizations to accomplish this extraction.</p>
+        </div>
+        <div class="high-energy-figure">
+            <img src="eic.jpg" alt="Electron-ion Collider">
+        </div>
+    </div>
+</section>
+
+<section id="others" class="section-others">
+    <h2>Other Research Projects</h2>
+    <ul class="other-projects-list">
+        <li>Near-field calibration of large parabolic antennas</li>
+        <li>General relativity testing in exoplanetary systems</li>
+        <li>Quantum algorithms (QTF, Shor, QER, etc)</li>
+    </ul>
+</section>
+
+    <footer>
+        <p>© 2024 SG. All rights reserved.</p>
+    </footer>
+</body>
+</html>
