@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1em;
+            padding: 1.2em;
             background: #333;
             color: white;
         }
@@ -46,7 +46,7 @@
         section#contact {
             text-align: center;
             padding: 50px 0;
-            background-color: white; /* Or any color that matches your main page background */
+            background-color: white; /* Or any color*/
         }
 
         #contact h1 {
@@ -60,14 +60,18 @@
         }
 
         #contact .contact-info {
+            width: 60%; /* Set the width of the contact info box to 60% */
             text-align: left;
             display: inline-block;
             margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #contact .small-font {
             font-size: 1.3em; /* Small font for contact details */
             line-height: 1.6;
+            margin-bottom: 20px; /* Adds extra space between publication entries */
         }
 
         footer {
@@ -76,6 +80,15 @@
             background: #333;
             color: white;
             margin-top: 20px;
+        }
+
+        a {
+            color: blue; /* Makes link visibly distinct */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Adds underline on hover for link */
         }
     </style>
 </head>
@@ -86,9 +99,9 @@
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="projects.html">Research Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="work.html">Professional Experience</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -96,12 +109,11 @@
     <main>
         <section id="contact">
             <h1>Publications</h1>
-            <p class="medium-font">Below are some selected publications. For the full list, please refer to my CV.</p>
+            <p class="medium-font">Below are some selected publications.</p>
             <div class="contact-info">
-                <p class="small-font">1. Gou, Xirui; Wang, Xinhong. Analysis of the Near-Field Response of the Dual-Channel Monopulse System and Its 
-Applications in Phase Calibration. IEEE 4th ISCEIC, pp. 349 – 355, Oct 2023.</p>
-                <p class="small-font">2. Gou, Xirui; Pan, Xinyue; Wang, Le. General Relativity Testing in Exoplanetary Systems. IOP Conference Series: 
-Earth and Environmental Science, Vol. 658, 2021.</p>
+                <p class="small-font">1. Gou, Xirui; Wang, Xinhong. Analysis of the Near-Field Response of the Dual-Channel Monopulse System and Its Applications in Phase Calibration. IEEE 4th ISCEIC, pp. 349 – 355, Oct 2023.</p>
+                <p class="small-font">2. Gou, Xirui; Pan, Xinyue; Wang, Le. General Relativity Testing in Exoplanetary Systems. IOP Conference Series: Earth and Environmental Science, Vol. 658, 2021.</p>
+                <p class="small-font">3. Wang, Zhongwei; Gou, Xirui; Fu, Ruiqing; Fu, Zhixuan. Quantum Fourier Transform and Its Application in Shor’s Algorithm. ICCIA, pp. 275 - 286, Sept 2020.</p>
             </div>
         </section>
     </main>

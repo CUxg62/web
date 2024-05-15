@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1em;
+            padding: 1.2em;
             background: #333;
             color: white;
         }
@@ -43,31 +43,57 @@
             color: #e7e7e7;
         }
 
-        section#contact {
+        section {
+            padding: 20px;
             text-align: center;
-            padding: 50px 0;
-            background-color: white; /* Or any color that matches your main page background */
         }
 
-        #contact h1 {
-            font-size: 2.2em; /* Large font for the heading */
-            margin-bottom: 20px;
+        h2 {
+            font-size: 1.5em; /* Standard size for all headings except the first */
         }
 
-        #contact p.medium-font {
-            font-size: 1.5em; /* Medium font for the sub-heading */
-            margin-bottom: 20px;
+        .section-quantum h2 {
+            font-size: 2.2em; /* Larger size for the first section heading */
         }
 
-        #contact .contact-info {
+        .title-box {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .project-content, .high-energy-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .project-text, .high-energy-text, .other-projects-content {
+            width: 70%;
             text-align: left;
-            display: inline-block;
-            margin-top: 20px;
+            font-size: 1.3em;
+            margin: auto; /* Centers the text block */
+            padding-left: 20px; /* Indents the content text */
         }
 
-        #contact .small-font {
-            font-size: 1.3em; /* Small font for contact details */
-            line-height: 1.6;
+        .high-energy-text, .other-projects-content {
+            width: 50%; /* Adjusted for the second, third, and fourth sections */
+            text-indent: 20px; /* Additional indentation for content text */
+        }
+
+        .section-high-energy, .section-further-projects {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .section-others {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
         }
 
         footer {
@@ -77,6 +103,15 @@
             color: white;
             margin-top: 20px;
         }
+
+        a {
+            color: blue; /* Makes link visibly distinct */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Adds underline on hover for link */
+        }
     </style>
 </head>
 <body>
@@ -85,27 +120,59 @@
         <nav>
             <ul>
                 <li><a href="index.html">About Me</a></li>
-                <li><a href="projects.html">Research Projects</a></li>
+                <li><a href="projects.html" class="active">Research Projects</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="work.html">Professional Experience</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="contact">
-            <h1>Professional Experience</h1>
-            <p class="medium-font">(I will continue to work on this section.)</p>
-            <div class="contact-info">
-                <p class="small-font">1. Undergraduate TA, AEP 3330: Mechanical Particles and Solid Bodies, Cornell University  </p>
-                <p class="small-font">2. Telecommunications Intern, SJZ Aodong Electronic Technology Co., Ltd, China.</p>
+        <section id="quantum" class="section-quantum">
+            <h2>Professional Experience</h2>
+            <div class="project-content">
+                <div class="project-text">
+                    <p>I am excited to share with you the journey I've undertaken in various roles across academia and industry. Each position has offered me unique challenges and learning opportunities, contributing significantly to my professional growth. Below, you will find details of my roles. You can also view my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>© 2024 SG. All rights reserved.</p>
-    </footer>
+        <section id="high-energy" class="section-high-energy">
+            <div class="title-box">
+                <h2 style="margin: 0; text-align: left;">Undergraduate TA for AEP 3330</h2>
+                <h2 style="margin: 0; text-align: right;">Aug 2023 - Dec 2023</h2>
+            </div>
+            <div class="high-energy-content">
+                <div class="high-energy-text">
+                    <p>As the undergraduate TA for AEP 3330: Mechanical Particles and Solid Bodies, I was responsible for verifying the solution sets for homework and grading weekly assignments. Additionally, I addressed students’ inquiries related to homework and exam preparation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="others" class="section-others">
+            <div class="title-box">
+                <h2 style="margin: 0; text-align: left;">Intern, Aodong Electronic Technology </h2>
+                <h2 style="margin: 0; text-align: right;">Dec 2021 - Apr 2022</h2>
+            </div>
+            <div class="other-projects-content">
+                <p>In this internship experience, I developed an efficient conversion of frequency stability between the time domain and the frequency domain. Utilizing this conversion method, I implemented a MATLAB-based simulation program to model the impact of phase noise on velocity measurement precision. Experiments were conducted with TT&C systems across a range of carrier frequencies. It was found that when measuring the velocity of long-range targets, high carrier frequencies should be used to reduce phase noise related measurement errors.</p>
+            </div>
+        </section>
+
+        <section id="further-projects" class="section-further-projects">
+            <div class="title-box">
+                <h2 style="margin: 0; text-align: left;">TA, NC International Edu</h2>
+                <h2 style="margin: 0; text-align: right;">Jul 2020 - Mar 2021</h2>
+            </div>
+            <div class="other-projects-content">
+                <p>As a tutor in calculus and calculus-based mechanics, I enhanced students' academic performance through individualized support and feedback during one-on-one sessions. I placed an emphasis on teaching advanced problem-solving techniques. Additionally, I held weekly sessions for the entire class to provide homework guidance and introduce effective strategies for exam preparation.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 SG. All rights reserved.</p>
+        </footer>
+    </main>
 </body>
 </html>
